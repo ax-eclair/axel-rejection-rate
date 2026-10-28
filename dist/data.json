@@ -1,6 +1,6 @@
 {
   "meta": {
-    "asOf": "2026-10-16",
+    "asOf": "2026-10-28",
     "timezone": "Europe/Berlin",
     "period": "Recherche 2026",
     "account": "giretaxel@gmail.com",
@@ -8,7 +8,7 @@
       "HMBotel / DigiHMB",
       "General (dossier modèle)"
     ],
-    "gmailRead": 244,
+    "gmailRead": 257,
     "driveFolders": 77,
     "uniqueDriveApplications": 65,
     "driveDuplicatesRemoved": 12,
@@ -20,8 +20,10 @@
       "Les jours sont calculés en Europe/Berlin. La date de création d’un dossier ne remplace jamais la date d’envoi. Une date absente reste inconnue.",
       "Les échanges de présélection et de feedback sont inclus dans les étapes ; plusieurs interlocuteurs dans une même rencontre comptent pour un entretien.",
       "Les refus sans entretien retrouvé sont classés directs. Les étapes hors email peuvent manquer. Les cas Bjak, Enpal et les nouvelles soumissions Superchat sont signalés dans les fiches.",
-      "Photographie des sources consultées au 16 octobre 2026, sans synchronisation automatique. Les messages hors recherche, les newsletters et HMBotel sont exclus."
-    ]
+      "Gmail actualisé au 28 octobre 2026 ; dossiers Drive recensés au 16 octobre 2026. Pas de synchronisation automatique. Les messages hors recherche, les newsletters et HMBotel sont exclus."
+    ],
+    "gmailAsOf": "2026-10-28",
+    "driveAsOf": "2026-10-16"
   },
   "applications": [
     {
@@ -1848,9 +1850,9 @@
       "company": "GLS/NXT",
       "role": "(Junior) Integration Manager",
       "folders": [],
-      "status": "pending",
+      "status": "active",
       "completed": 0,
-      "unlocked": 0,
+      "unlocked": 1,
       "events": [
         {
           "date": "2026-10-09",
@@ -1858,9 +1860,19 @@
           "label": "Confirmation de réception",
           "source": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a120d1975bb0a41",
           "messageId": "1a120d1975bb0a41"
+        },
+        {
+          "date": "2026-10-26",
+          "type": "interview",
+          "label": "Entretien 1 · Présélection téléphonique",
+          "source": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a17776dc4d8060a",
+          "messageId": "1a17776dc4d8060a",
+          "stage": 1
         }
       ],
-      "notes": [],
+      "notes": [
+        "Invitation à un premier échange téléphonique reçue le 26 octobre ; disponibilités demandées. Aucun entretien effectué confirmé au 28 octobre."
+      ],
       "verified": true,
       "applicationDate": "2026-10-09",
       "dateBasis": "Confirmation de réception",
@@ -1871,6 +1883,12 @@
           "title": "Thank you for your application to GLS/NXT",
           "date": "2026-10-09",
           "url": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a120d1975bb0a41"
+        },
+        {
+          "type": "Gmail",
+          "title": "Your Application for the Integration Manager Position",
+          "date": "2026-10-26",
+          "url": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a17776dc4d8060a"
         }
       ],
       "channels": [
@@ -1924,7 +1942,7 @@
           "created": "2026-09-08"
         }
       ],
-      "status": "pending",
+      "status": "rejected",
       "completed": 0,
       "unlocked": 0,
       "events": [
@@ -1934,9 +1952,19 @@
           "label": "Confirmation de réception",
           "source": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a08bfdb10fb4a3f",
           "messageId": "1a08bfdb10fb4a3f"
+        },
+        {
+          "date": "2026-10-27",
+          "type": "rejection",
+          "label": "Rejet reçu",
+          "source": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a17d5aea7798938",
+          "messageId": "1a17d5aea7798938"
         }
       ],
-      "notes": [],
+      "notes": [
+        "Refus reçu le 27 octobre : poste déjà pourvu.",
+        "Aucun entretien antérieur retrouvé dans les sources consultées ; classé comme rejet direct."
+      ],
       "verified": true,
       "applicationDate": "2026-09-10",
       "dateBasis": "Confirmation de réception",
@@ -1953,6 +1981,12 @@
           "title": "heyData - Junior Business Automation and AI Manager",
           "date": null,
           "url": "https://drive.google.com/drive/folders/1wzvKda29cE0pKILdKYoqxleMSpFerYlU"
+        },
+        {
+          "type": "Gmail",
+          "title": "Your application@heyData",
+          "date": "2026-10-27",
+          "url": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a17d5aea7798938"
         }
       ],
       "channels": [
@@ -4198,10 +4232,18 @@
           "label": "Offre confirmée / contrat annoncé",
           "source": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a130cdaf7a4a0d5",
           "messageId": "1a130cdaf7a4a0d5"
+        },
+        {
+          "date": "2026-10-21",
+          "type": "contract",
+          "label": "Contrat signé par toutes les parties",
+          "source": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a15dcde0223d70e",
+          "messageId": "1a15dcde0223d70e"
         }
       ],
       "notes": [
-        "Offre confirmée le 12 octobre ; projet de contrat reçu le 14 octobre. Offre obtenue ne signifie pas contrat signé. Trois échanges : recruteuse, Head of Product, puis CEO."
+        "Offre confirmée le 12 octobre ; projet de contrat reçu le 14 octobre ; signature par toutes les parties confirmée le 21 octobre. Trois échanges : recruteuse, Head of Product, puis CEO.",
+        "Premier jour sur place confirmé pour le 16 novembre dans l’échange du 26 octobre."
       ],
       "verified": true,
       "applicationDate": "2026-09-24",
@@ -4333,6 +4375,36 @@
           "title": "ROMEO - erasys - Junior Product Owner",
           "date": null,
           "url": "https://drive.google.com/drive/folders/13-8Ad02INIwECAmX5EQ1qRbnh1n-YqBW"
+        },
+        {
+          "type": "Gmail",
+          "title": "Completed: Sign the document \"Employment Contract.pdf\"",
+          "date": "2026-10-21",
+          "url": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a15dcde0223d70e"
+        },
+        {
+          "type": "Gmail",
+          "title": "Re: Your Employment Contract – Junior Product Owner at erasys",
+          "date": "2026-10-21",
+          "url": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a15d92e66dc64b3"
+        },
+        {
+          "type": "Gmail",
+          "title": "Re: Your Employment Contract – Junior Product Owner at erasys",
+          "date": "2026-10-21",
+          "url": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a15f43b1d1ee4b3"
+        },
+        {
+          "type": "Gmail",
+          "title": "Re: Note",
+          "date": "2026-10-26",
+          "url": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a177220e419d395"
+        },
+        {
+          "type": "Gmail",
+          "title": "Re: Note",
+          "date": "2026-10-26",
+          "url": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a1774299d4abcbe"
         }
       ],
       "channels": [
@@ -4959,23 +5031,39 @@
           "created": "2026-09-16"
         }
       ],
-      "status": "unverified",
-      "completed": null,
+      "status": "rejected",
+      "completed": 0,
       "unlocked": 0,
-      "events": [],
-      "notes": [
-        "Dossier présent sur Drive. Aucune preuve d’envoi ou réception retrouvée dans Gmail : exclu du total confirmé, disponible dans la vue élargie."
+      "events": [
+        {
+          "date": "2026-10-20",
+          "type": "rejection",
+          "label": "Rejet reçu",
+          "source": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a1597b5c04a7c0e",
+          "messageId": "1a1597b5c04a7c0e"
+        }
       ],
-      "verified": false,
+      "notes": [
+        "Refus « Product Manager » rapproché du seul dossier Talon.One recensé, « Product Manager - Gamification » ; spécialisation non précisée dans le mail.",
+        "Le refus confirme la candidature. Date d’envoi non retrouvée ; le 20 octobre est la date du refus.",
+        "Aucun entretien antérieur retrouvé dans les sources consultées ; classé comme rejet direct."
+      ],
+      "verified": true,
       "applicationDate": null,
       "dateBasis": null,
-      "knownBy": null,
+      "knownBy": "2026-10-20",
       "sources": [
         {
           "type": "Drive Mail",
           "title": "Talon.One - Product Manager - Gamification",
           "date": null,
           "url": "https://drive.google.com/drive/folders/1yyWyQF4RsP1zn0GW48BqkHvHZ4YUkwwf"
+        },
+        {
+          "type": "Gmail",
+          "title": "Thank you for applying at Talon.One",
+          "date": "2026-10-20",
+          "url": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a1597b5c04a7c0e"
         }
       ],
       "channels": [
@@ -5521,7 +5609,7 @@
           "created": "2026-09-09"
         }
       ],
-      "status": "active",
+      "status": "withdrawn",
       "completed": 3,
       "unlocked": 4,
       "events": [
@@ -5563,10 +5651,18 @@
           "source": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a120e0f0df03e3c",
           "messageId": "1a120e0f0df03e3c",
           "stage": 4
+        },
+        {
+          "date": "2026-10-22",
+          "type": "withdrawal",
+          "label": "Retrait volontaire après acceptation de l’offre ROMEO",
+          "source": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a16211f1115b172",
+          "messageId": "1a16211f1115b172"
         }
       ],
       "notes": [
-        "Trois échanges effectués, dont un feedback RH de 15 minutes. La quatrième rencontre (étude de cas) est débloquée mais reportée et non effectuée au 16 octobre. Les reports et rappels ne sont pas de nouvelles étapes."
+        "Trois échanges effectués, dont un feedback RH de 15 minutes. Quatrième étape débloquée mais non effectuée : retrait volontaire annoncé le 22 octobre après acceptation de l’offre ROMEO ; annulation du rendez-vous reçue le 26 octobre.",
+        "Les reports et l’annulation ne créent pas de nouvelle étape et ne comptent pas comme un rejet."
       ],
       "verified": true,
       "applicationDate": "2026-09-10",
@@ -5710,6 +5806,36 @@
           "title": "Voyfai - Senior Product Manager (Builder)",
           "date": null,
           "url": "https://drive.google.com/drive/folders/1sGrFBENGolSSt055umpQxJDG68GFAmDM"
+        },
+        {
+          "type": "Gmail",
+          "title": "Re: Interview postpone Axel Giret",
+          "date": "2026-10-22",
+          "url": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a16211f1115b172"
+        },
+        {
+          "type": "Gmail",
+          "title": "Re: Interview postpone Axel Giret",
+          "date": "2026-10-22",
+          "url": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a162a6f1765b6ad"
+        },
+        {
+          "type": "Gmail",
+          "title": "Canceled: Axel - Interview with Voyfai",
+          "date": "2026-10-26",
+          "url": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a17772c8af4b9a8"
+        },
+        {
+          "type": "Gmail",
+          "title": "Axel - Interview with Voyfai",
+          "date": "2026-10-20",
+          "url": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a15b3e0b635e1a6"
+        },
+        {
+          "type": "Gmail",
+          "title": "Canceled: Axel - Interview with Voyfai",
+          "date": "2026-10-20",
+          "url": "https://mail.google.com/mail/u/?authuser=giretaxel%40gmail.com#all/1a15b3e07f1b3a09"
         }
       ],
       "channels": [

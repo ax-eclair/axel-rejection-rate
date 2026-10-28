@@ -19,7 +19,8 @@ function render(){
  $('#rejections').textContent=r;$('#rate-note').textContent=copy(`${percent(r,a.length)} des ${scope==='verified'?'candidatures confirmées':'dossiers recensés'}`,`${percent(r,a.length)} of ${scope==='verified'?'confirmed applications':'recorded folders'}`);
  $('#unlocks').textContent=n;$('#interview-note').textContent=copy(`Dans ${interviewed} processus de recrutement`,`Across ${interviewed} hiring processes`);
  $('#offers').textContent=a.filter(x=>x.status==='offer').length;
- $('#scope-note').textContent=scope==='verified'?t('20 dossiers Drive seuls sont exclus de ce total.'):t('20 dossiers sans preuve d’envoi retrouvée sont inclus ici.');
+ const unverified=DATA.applications.filter(x=>!x.verified).length;
+ $('#scope-note').textContent=scope==='verified'?copy(`${unverified} dossiers Drive seuls sont exclus de ce total.`,`${unverified} Drive-only folders are excluded from this total.`):copy(`${unverified} dossiers sans preuve d’envoi retrouvée sont inclus ici.`,`Includes ${unverified} folders with no evidence of an application being sent.`);
  renderDonut();renderChart();renderTable();
 }
 function renderDonut(){
@@ -83,9 +84,13 @@ function exportCSV(){
  const headers=[t('Entreprise'),t('Poste'),t('Situation'),t('Date envoi ou réception'),t('Preuve date'),t('Entretiens effectués'),t('Étapes débloquées'),t('Envoi confirmé'),t('Notes'),t('Sources')];
  const cells=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
  const rows=filteredApps().map(a=>[t(a.company),t(a.role),groupInfo(group(a))[1],a.applicationDate,t(a.dateBasis),a.completed,a.unlocked,a.verified?t('Oui'):t('Non'),a.notes.map(t).join(' | '),a.sources.map(s=>s.url).join(' | ')]);
- const csv='\ufeff'+[headers,...rows].map(r=>r.map(cells).join(';')).join('\r\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const el=document.createElement('a');el.href=url;el.download=copy('axel-candidatures-2026-10-16.csv','axel-applications-2026-10-16.csv');el.click();setTimeout(()=>URL.revokeObjectURL(url),1000);$('#toast').textContent=copy(`${rows.length} candidatures exportées (filtres actuels).`,`${rows.length} applications exported (current filters).`);$('#toast').style.display='block';setTimeout(()=>$('#toast').style.display='none',3500);
+ const csv='\ufeff'+[headers,...rows].map(r=>r.map(cells).join(';')).join('\r\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const el=document.createElement('a');el.href=url;el.download=copy(`axel-candidatures-${DATA.meta.asOf}.csv`,`axel-applications-${DATA.meta.asOf}.csv`);el.click();setTimeout(()=>URL.revokeObjectURL(url),1000);$('#toast').textContent=copy(`${rows.length} candidatures exportées (filtres actuels).`,`${rows.length} applications exported (current filters).`);$('#toast').style.display='block';setTimeout(()=>$('#toast').style.display='none',3500);
 }
 function renderMethodology(){
+ const snapshotDate=dateLabel(DATA.meta.asOf);
+ $('#snapshot-date').textContent=copy(`Photographie au ${snapshotDate}`,`Snapshot as of ${snapshotDate}`);
+ $('#snapshot-note').textContent=copy(`Ce site présente une photographie au ${snapshotDate}. Il ne se synchronise pas automatiquement avec Gmail ou Drive.`,`This site is a snapshot as of ${snapshotDate}. It does not automatically sync with Gmail or Drive.`);
+ $('#updated-date').textContent=copy(`Mis à jour le ${snapshotDate}`,`Updated ${snapshotDate}`);
  $('#coverage').textContent=copy(`${DATA.meta.driveFolders} dossiers de candidature dans Mail et Online, ramenés à ${DATA.meta.uniqueDriveApplications} candidatures distinctes sur Drive (${DATA.meta.driveDuplicatesRemoved} doublons fusionnés). ${DATA.meta.gmailRead} mails lus en détail pour reconstruire les parcours. Les emails ajoutent les candidatures absentes de Drive.`,`${DATA.meta.driveFolders} application folders in Mail and Online, reduced to ${DATA.meta.uniqueDriveApplications} distinct Drive applications (${DATA.meta.driveDuplicatesRemoved} duplicates merged). ${DATA.meta.gmailRead} emails read in detail to reconstruct each journey. Emails add applications missing from Drive.`);
  $('#method-list').innerHTML=DATA.meta.methodology.map(item=>`<li>${esc(t(item))}</li>`).join('')+`<li>${t("Taux de rejet = candidatures rejetées ÷ candidatures du périmètre sélectionné. Les candidatures sans réponse restent au dénominateur. Le camembert représente les situations actuelles, pas seulement les processus terminés.")}</li>`;
 }
